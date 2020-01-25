@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Органайзер</string>
+    <string name="save_button">Сохранить</string>
+    <string name="save_data">Данные сохранены</string>
+    <string name="nosave_data">Данные не сохранены</string>
+</resources>
