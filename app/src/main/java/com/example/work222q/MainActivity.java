@@ -29,15 +29,24 @@ public class MainActivity extends AppCompatActivity {
 
         int id = item.getItemId();
 
-        switch(id){
+        switch (id) {
             case R.id.action_open_notes:
-            Toast.makeText(MainActivity.this, "Отрыть записную книжку", Toast.LENGTH_LONG).show();
-            Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
-            startActivity(intentNotes);
-            return true;
+                Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
+                startActivity(intentNotes);
+                return true;
             case R.id.action_bank:
                 Intent intentBank = new Intent(MainActivity.this, BankActivity.class);
                 startActivity(intentBank);
+                return true;
+            case R.id.action_city:
+                Intent intentCity = new Intent(MainActivity.this, CityActivity.class);
+                startActivity(intentCity);
+                return true;
+            case R.id.action_calendar:
+                Intent intentCalendar = new Intent(MainActivity.this, CalendarActivity.class);
+                startActivity(intentCalendar);
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
