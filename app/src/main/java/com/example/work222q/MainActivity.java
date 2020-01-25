@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Intent intentNotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +32,12 @@ public class MainActivity extends AppCompatActivity {
         switch(id){
             case R.id.action_open_notes:
             Toast.makeText(MainActivity.this, "Отрыть записную книжку", Toast.LENGTH_LONG).show();
-            intentNotes = new Intent(MainActivity.this, NotesActivity.class);
+            Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
             startActivity(intentNotes);
             return true;
+            case R.id.action_bank:
+                Intent intentBank = new Intent(MainActivity.this, BankActivity.class);
+                startActivity(intentBank);
         }
         return super.onOptionsItemSelected(item);
     }
